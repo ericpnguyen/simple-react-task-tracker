@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <Header
+    onAdd={[Function]}
+    showAdd={false}
+    title="Task Tracker"
+  />
+  <Routes>
+    <Route
+      element={<About />}
+      path="/about"
+    />
+    <Route
+      element={
+        <React.Fragment>
+          No tasks
+        </React.Fragment>
+      }
+      path="/"
+    />
+  </Routes>
+  <Footer />
+</div>
+`;

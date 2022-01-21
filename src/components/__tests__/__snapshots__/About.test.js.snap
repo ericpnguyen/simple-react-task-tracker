@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="about"
+>
+  <h4>
+    Version 1.0.1
+  </h4>
+  <a
+    className="about-link"
+    href="/"
+    onClick={[Function]}
+  >
+    Go back
+  </a>
+</div>
+`;
+
+exports[`matches snapshot 2`] = `
+<div
+  data-testid="about"
+>
+  <h4>
+    Version 1.0.1
+  </h4>
+  <Link
+    className="about-link"
+    to="/"
+  >
+    Go back
+  </Link>
+</div>
+`;

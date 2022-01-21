@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<form
+  className="add-form"
+  onSubmit={[Function]}
+>
+  <div
+    className="form-layout"
+  >
+    <label>
+      Task
+    </label>
+    <input
+      onChange={[Function]}
+      placeholder="Add task"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-layout"
+  >
+    <label>
+      Date
+    </label>
+    <input
+      onChange={[Function]}
+      placeholder="Add date"
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-layout form-layout-check"
+  >
+    <label>
+      Set Reminder
+    </label>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="checkbox"
+      value={false}
+    />
+  </div>
+  <input
+    className="btn btn-save"
+    type="submit"
+    value="Save Task"
+  />
+</form>
+`;

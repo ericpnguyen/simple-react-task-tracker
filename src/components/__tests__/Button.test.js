@@ -1,12 +1,12 @@
 import { shallow } from "enzyme";
 
-import App from "./App.js";
+import Button from "../Button.js";
 
 it("renders without crashing", () => {
-  shallow(<App />);
+  shallow(<Button />);
 });
 
 it("matches snapshot", () => {
-  const wrapper = shallow(<App />);
+  const wrapper = shallow(<Button />);
   expect(wrapper).toMatchSnapshot();
 });
