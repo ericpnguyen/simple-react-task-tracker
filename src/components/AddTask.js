@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const AddTask = ({ onAdd }) => {
+const AddTask = function ({ onAdd }) {
   // Initiate state
   const [text, setText] = useState("");
   const [date, setDate] = useState("");
   const [reminder, setReminder] = useState(false);
 
   // On submit, alert the user if there is no task test. Otherwise, send task data to onAdd in App.js and reset state
-  const onSubmit = (e) => {
+  const onSubmit = function (e) {
     e.preventDefault();
 
     if (!text) {
