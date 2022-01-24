@@ -5,12 +5,6 @@
       "date": "Monday at 4:30 p.m.",
       "reminder": true,
       "id": 2
-    },
-    {
-      "text": "Test task",
-      "date": "Test date",
-      "reminder": true,
-      "id": 3
     }
   ]
 }

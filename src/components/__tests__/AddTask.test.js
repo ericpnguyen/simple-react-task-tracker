@@ -3,7 +3,6 @@ import React from "react";
 import { mount, shallow } from "enzyme";
 
 import AddTask from "../AddTask.js";
-import { MemoryRouter } from "react-router-dom";
 
 it("renders without crashing", () => {
   shallow(<AddTask />);
@@ -14,16 +13,27 @@ it("matches snapshot", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-// it("uses on submit", () => {
-//   const winAlert = window.alert; // remember alert
-//   window.alert = () => {};
+test("alert window with empty text field", () => {
+  const winAlert = window.alert; // remember alert
+  window.alert = () => {};
+  const wrapper = mount(<AddTask />);
+  const spy = jest.spyOn(window, "alert");
 
-//   const wrapper = mount(<AddTask />);
-//   console.log(AddTask.prototype);
-//   const spy = jest.spyOn(AddTask.prototype, "onSubmit");
+  wrapper.simulate("submit");
+  expect(spy).toBeCalledTimes(1);
 
-//   wrapper.simulate("submit");
+  window.alert = winAlert;
+});
 
-//   expect(spy).toBeCalled();
-//   window.alert = winAlert;
-// });
+test("onAdd called with populated text field", () => {
+  const onAdd = jest.fn();
+  const wrapper = mount(<AddTask onAdd={onAdd} />);
+  wrapper
+    .find("input")
+    .first()
+    .simulate("change", { target: { type: "text", value: "test" } });
+
+  wrapper.simulate("submit");
+
+  expect(onAdd).toBeCalledTimes(1);
+});
